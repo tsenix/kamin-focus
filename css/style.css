@@ -164,6 +164,15 @@ body._lock {
   height: 20px;
 }
 
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .quantity {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100px;
@@ -290,21 +299,15 @@ body._lock {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 100px;
   position: relative;
-}
-
-.header__search::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background: url("../img/icons/search.svg") center/100% no-repeat;
+  border-bottom: 1px solid #48001E;
 }
 
 .header__search::before {
@@ -330,7 +333,11 @@ body._lock {
   width: 100%;
   padding: 8px 20px 8px 0;
   color: #48001E;
-  border-bottom: 1px solid #48001E;
+  border: none;
+}
+
+.header__search input:focus-visible {
+  outline: none;
 }
 
 .header__search input::-webkit-input-placeholder {
@@ -351,6 +358,24 @@ body._lock {
 
 .header__search input::placeholder {
   color: #48001E;
+}
+
+.header__search button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15px;
+          flex: 0 0 15px;
+  width: 15px;
+}
+
+.header__search button:hover img {
+  width: 110%;
+}
+
+.header__search button img {
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .header__contacts {
@@ -556,6 +581,10 @@ body._lock {
   transition: all 0.5s;
 }
 
+.menu__catalog-button_mob {
+  display: none;
+}
+
 .menu__catalog-button:before,
 .menu__catalog-button:after {
   content: "";
@@ -597,6 +626,10 @@ body._lock {
   transition: all 0.5s;
 }
 
+.menu__catalog-button a {
+  color: inherit;
+}
+
 .menu__catalog-button._active {
   background-color: #48001e;
 }
@@ -629,18 +662,21 @@ body._lock {
 .catalog-menu {
   position: absolute;
   z-index: 10;
-  top: 85px;
+  top: 50px;
   left: 0;
   width: 100%;
   height: 50px;
   background-color: #48001e;
+  opacity: 0;
+  visibility: hidden;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .catalog-menu._active {
-  top: 135px;
+  opacity: 1;
+  visibility: visible;
 }
 
 .catalog-menu__list {
@@ -2772,7 +2808,7 @@ table.scsh_card_tovlist td img {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  padding: 15px 10px 20px 10px;
+  padding: 15px 8px 20px 8px;
   background-color: #fff;
   border: 1px solid #E4E4E4;
   border-radius: 5px;
@@ -2825,7 +2861,7 @@ table.scsh_card_tovlist td img {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25px;
           flex: 0 0 25px;
-  margin-right: 10px;
+  margin-right: 5px;
   width: 25px;
   height: 25px;
   border: 1px solid #AAAAAA;
@@ -2849,7 +2885,7 @@ table.scsh_card_tovlist td img {
 }
 
 .catalog-card__text {
-  font-size: 13px;
+  font-size: 12px;
   font-family: "FiraSans", sans-serif;
 }
 
@@ -3002,6 +3038,11 @@ table.scsh_card_tovlist td img {
   display: flex;
 }
 
+.brand__item:hover .brand__image {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+}
+
 .brand__image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3017,6 +3058,9 @@ table.scsh_card_tovlist td img {
   background-color: #fff;
   border: 1px solid #E4E4E4;
   border-radius: 5px;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
 .brand__image img {
@@ -3417,6 +3461,11 @@ table.scsh_card_tovlist td img {
     background-color: #48001e;
   }
 
+  .menu__catalog-button:hover .catalog-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .menu__catalog-button:hover svg {
     fill: #fff;
   }
@@ -3665,6 +3714,16 @@ table.scsh_card_tovlist td img {
     border-left: none;
   }
 
+  .menu__catalog-button_desk {
+    display: none;
+  }
+
+  .menu__catalog-button_mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .footer ._container {
     max-width: 738px;
   }
@@ -3845,16 +3904,11 @@ table.scsh_card_tovlist td img {
   }
 
   .catalog-menu {
-    top: 135px;
-    height: calc(100vh - 135px);
+    top: 50px;
+    height: calc(100vh - 50px);
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
-  }
-
-  .catalog-menu._active {
-    opacity: 1;
-    visibility: visible;
   }
 
   .catalog-menu__list {

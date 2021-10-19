@@ -172,7 +172,7 @@ if (openFilter != null) {
 }
 
 //Catalog
-const openCatalog = document.querySelector('.menu__catalog-button');
+const openCatalog = document.querySelector('.menu__catalog-button_mob');
 if (openCatalog != null) {
   const delay = 500;
   const catalogBody = document.querySelector('.catalog-menu');
