@@ -129,6 +129,7 @@ body {
 
 body._lock {
   overflow: hidden;
+  height: 100vh;
 }
 
 .btn {
@@ -3714,6 +3715,10 @@ table.scsh_card_tovlist td img {
     height: 35px;
   }
 
+  .header__nav {
+    border-right: 1.5px solid #48001E;
+  }
+
   .header__nav-item {
     border-right: none;
   }
@@ -3724,6 +3729,7 @@ table.scsh_card_tovlist td img {
 
   .header__nav-item:first-child {
     border-left: none;
+    border-right: none;
   }
 
   .menu__catalog-button_desk {
