@@ -746,13 +746,14 @@ textarea {
 }
 
 .mobile-menu {
+  margin-top: 85px;
   padding: 10px 15px 80px 15px;
-  position: absolute;
+  position: fixed;
   z-index: 20;
   left: 0;
-  top: 100%;
+  top: 0;
   width: 100%;
-  height: calc(100vh - 85px);
+  height: 100vh;
   overflow-y: auto;
   background-color: #fff;
   opacity: 0;
@@ -3915,9 +3916,10 @@ table.scsh_card_tovlist td img {
   }
 
   .catalog-menu {
-    padding-bottom: 100px;
-    top: 50px;
-    height: calc(100vh - 50px);
+    position: fixed;
+    margin-top: 135px;
+    top: 0;
+    height: 100vh;
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
@@ -3925,7 +3927,7 @@ table.scsh_card_tovlist td img {
 
   .catalog-menu__list {
     display: block;
-    padding: 15px 0;
+    padding: 15px 0 80px;
   }
 
   .catalog-menu__list > li {
