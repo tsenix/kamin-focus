@@ -161,6 +161,7 @@ body._lock {
 }
 
 .btn img {
+  width: 16px;
   height: 20px;
 }
 
@@ -292,6 +293,7 @@ textarea {
 }
 
 .header__logo img {
+  width: 135px;
   height: 45px;
 }
 
@@ -461,8 +463,8 @@ textarea {
 }
 
 .header__socials-link img {
-  max-width: 14px;
-  max-height: 13px;
+  width: 14px;
+  height: 13px;
 }
 
 .header__nav {
@@ -515,6 +517,7 @@ textarea {
 
 .header__nav-icon {
   margin-bottom: 10px;
+  width: 21px;
   height: 21px;
 }
 
@@ -923,6 +926,7 @@ textarea {
 }
 
 .footer__logo img {
+  width: 185px;
   height: 60px;
 }
 
@@ -2146,6 +2150,7 @@ table.scsh_card_tovlist td img {
 }
 
 .garanty__item-icon img {
+  width: 52px;
   height: 35px;
 }
 
@@ -2163,6 +2168,7 @@ table.scsh_card_tovlist td img {
 }
 
 .garanty__social img {
+  width: 22px;
   height: 16px;
 }
 
@@ -2382,6 +2388,7 @@ table.scsh_card_tovlist td img {
 }
 
 .info__item-icon img {
+  width: 37px;
   height: 35px;
 }
 
@@ -2461,6 +2468,7 @@ table.scsh_card_tovlist td img {
 
 .products__description a img {
   margin-right: 5px;
+  width: 35px;
   height: 30px;
 }
 
@@ -2546,6 +2554,7 @@ table.scsh_card_tovlist td img {
 }
 
 .products-card__top-block:hover .products-card__icon img {
+  width: 16px;
   height: 15px;
 }
 
@@ -2570,6 +2579,7 @@ table.scsh_card_tovlist td img {
 }
 
 .products-card__icon img {
+  width: 12px;
   height: 11px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -3699,6 +3709,7 @@ table.scsh_card_tovlist td img {
   }
 
   .header__logo img {
+    width: 105px;
     height: 35px;
   }
 
@@ -4337,6 +4348,7 @@ table.scsh_card_tovlist td img {
 
 @media (max-width: 479.98px) {
   .header__logo img {
+    width: 90px;
     height: 30px;
   }
 
