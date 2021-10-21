@@ -1928,6 +1928,10 @@ table.scsh_card_tovlist td img {
   display: flex;
   flex-direction: column;
 }
+.wrapper._lock {
+  overflow: hidden;
+  height: 100vh;
+}
 
 ._container {
   max-width: 1485px;
