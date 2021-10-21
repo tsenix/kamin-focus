@@ -746,7 +746,7 @@ textarea {
 }
 
 .mobile-menu {
-  padding: 10px 15px 40px 15px;
+  padding: 10px 15px 80px 15px;
   position: absolute;
   z-index: 20;
   left: 0;
@@ -2527,9 +2527,9 @@ table.scsh_card_tovlist td img {
   border-radius: 5px;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.8s;
-  -o-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 .products-card__top {
@@ -2651,9 +2651,9 @@ table.scsh_card_tovlist td img {
           justify-content: space-between;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.8s;
-  -o-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 .breadcrumbs {
@@ -3915,6 +3915,7 @@ table.scsh_card_tovlist td img {
   }
 
   .catalog-menu {
+    padding-bottom: 100px;
     top: 50px;
     height: calc(100vh - 50px);
     overflow-y: auto;
