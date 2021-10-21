@@ -223,6 +223,7 @@ function body_lock(delay) {
 }
 function body_lock_remove(delay) {
 	let body = document.querySelector("body");
+	let html = document.querySelector("html");
 	if (unlock) {
 		let lock_padding = document.querySelectorAll("._lp");
 		setTimeout(() => {
@@ -232,6 +233,7 @@ function body_lock_remove(delay) {
 			}
 			body.style.paddingRight = '0px';
 			body.classList.remove("_lock");
+			html.classList.remove("_lock");
 		}, delay);
 
 		unlock = false;
@@ -242,6 +244,7 @@ function body_lock_remove(delay) {
 }
 function body_lock_add(delay) {
 	let body = document.querySelector("body");
+	let html = document.querySelector("html");
 	if (unlock) {
 		let lock_padding = document.querySelectorAll("._lp");
 		for (let index = 0; index < lock_padding.length; index++) {
@@ -250,6 +253,7 @@ function body_lock_add(delay) {
 		}
 		body.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 		body.classList.add("_lock");
+		html.classList.add("_lock");
 
 		unlock = false;
 		setTimeout(function () {

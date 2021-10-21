@@ -123,10 +123,12 @@ h6 {
 }
 */
 
+html,
 body {
   color: #000;
 }
 
+html._lock,
 body._lock {
   overflow: hidden;
   height: 100vh;
@@ -816,6 +818,7 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 50px;
 }
 
 .mobile-menu__contacts .header__contacts {
